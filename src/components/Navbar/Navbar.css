@@ -1,0 +1,13 @@
+.offcanvas-backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Change the opacity here */
+    pointer-events: none; /* This will prevent clicks on the backdrop */
+  }
+
+#navbar {
+  background-color: rgb(232,222,212) !important;
+  border-bottom: 2px solid #ccc;
+}
+
+.bg-body {
+  background-color: rgb(232,222,212);
+}

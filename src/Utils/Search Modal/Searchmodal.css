@@ -1,0 +1,49 @@
+/* Searchmodal.css */
+
+.modal-body {
+    padding: 0; 
+    background-color: rgb(242 236 231);
+}
+
+.search-box-container {
+    width: 100%;
+    border: 1px solid #ddd;
+    /* border-radius: 8px;  */
+    padding: 1rem;
+    background-color: rgb(232,222,212); 
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+}
+
+.search-box-container .btn {
+    margin-right: 0.1rem;
+}
+
+.search-box-container .form-control {
+    border-radius: 50px; 
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+    box-sizing: border-box; 
+    flex: 1; 
+    background-color: rgb(242 236 231);
+}
+
+.search-box-container .form-control::placeholder {
+    color: rgb(167, 166, 166);
+}
+
+
+.search-box-container .btn-outline-success {
+    margin-left: 0.5rem; 
+}
+
+.search-box-container form {
+    display: flex;
+    align-items: center;
+}
+
+/* Remove border color on focus for .form-control */
+.search-box-container .form-control:focus {
+    border-color:#fff; /* Or you can use a color of your choice */
+    box-shadow: none; /* Remove box-shadow if Bootstrap adds it */
+}
+

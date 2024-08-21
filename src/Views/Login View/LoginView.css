@@ -1,0 +1,32 @@
+/* Button for login */
+.login-btn {
+    margin-bottom: 20px; /* Adjust spacing below the login button */
+}
+
+.login-inner-btn {
+    background-color: black; 
+    color: white; 
+    border: none;
+    border-radius: none;
+    padding: 5px 30px;
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+    width: 150px;
+    margin: 40px 0px 15px;
+}
+
+/* Container for the create account button */
+.create-account {
+    text-align: center; /* Center align the button */
+}
+
+.create-account-btn {
+    background: none;
+    color: black; 
+    border: none;
+    text-decoration: underline; 
+    cursor: pointer; 
+    font-size: 16px; 
+    margin-top: px; 
+}

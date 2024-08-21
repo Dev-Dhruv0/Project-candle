@@ -1,0 +1,40 @@
+/* ProductCard.css */
+
+.product-card-container-fluid {
+    background-color: rgb(232,222,212);
+}
+
+  .no-border {
+    border: none; /* Removes card border */
+  }
+  
+  .card-text-container {
+    /* Styling for the text container */
+    text-align: center; /* Center-align the text if desired */
+  }
+  
+  .card-text-container .card-title {
+    font-size: 1.25rem; /* Adjust title font size */
+  }
+  
+  .card-text-container .card-text {
+    font-size: 0.875rem; /* Adjust text font size */
+  }
+  
+  .responsive-image {
+    object-fit: cover; /* Ensure the image covers the container */
+    max-height: 200px; /* Default max height for small screens */
+  }
+  
+  @media (min-width: 992px) {
+    .responsive-image {
+      max-height: 300px; /* Increase height for large screens */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .responsive-image {
+      max-height: 400px; /* Further increase height for extra large screens */
+    }
+  }
+  
