@@ -35,7 +35,7 @@ export default function LoginValidation() {
             login(response.data.token); 
 
             // Redirect to a protected route
-            // navigate('/protected');
+            navigate('/profile');
 
         } catch (error) {
             console.error('Error Submitting Form: ', error.message);

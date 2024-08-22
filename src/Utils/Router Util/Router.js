@@ -5,22 +5,20 @@ import SignUpValidation from "../../Views/Register View/RegisterView";
 // import { FormProvider } from "../../Context/RegisterViewContext/RegisterViewContext";
 import ProtectedRoute from "../Protected Route/ProtectedRoute";
 import ProfileView from "../../Views/Profile View/ProfileView";
-import { useAuth } from "../../Context/Auth Context/AuthContext";
+import { AuthProvider } from "../../Context/Auth Context/AuthContext";
 import { FormProvider } from "../../Context/RegisterViewContext/RegisterViewContext";
 import LoginValidation from "../../Views/Login View/LoginView";
 import DisplaySignupData from "../../DisplaySignupData";
 
 const AppRouter = () => {
-  const { setIsAuthenticated} = useAuth();
-  // const [isAuthenticated, setIsAutheticated] = useState(false);
-  const handleSignIn = ( status ) => {
-    setIsAuthenticated(status);
-  };
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Navbar />,
+      element: 
+          <AuthProvider>
+            <Navbar />
+          </AuthProvider>,
       children: [
         {
           path: "/",
@@ -38,7 +36,7 @@ const AppRouter = () => {
             path: "/login",
             element: (
               <FormProvider>
-                <LoginValidation onSignIn={handleSignIn}/>
+                <LoginValidation />
               </FormProvider>
             ),
           },
@@ -52,9 +50,9 @@ const AppRouter = () => {
           {
             path: "/signup-data",
             element: (
-              <ProtectedRoute>
+              // <ProtectedRoute>
                 <DisplaySignupData />
-              </ProtectedRoute>
+              // </ProtectedRoute>
             )
           }
       ],

@@ -1,8 +1,12 @@
 import { NavLink, Outlet } from "react-router-dom";
 import './Navbar.css';
 import Searchmodal from "../../Utils/Search Modal/Searchmodal";
+import { useAuth } from "../../Context/Auth Context/AuthContext";
 
 const Navbar = () => {
+
+  const { isAuthenticated } = useAuth();
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body py-2" id="navbar">
@@ -53,7 +57,7 @@ const Navbar = () => {
                   </li>
 
                   <li className="nav-item">
-                    <NavLink to="/login" className="nav-link me-3">
+                    <NavLink to={isAuthenticated ? "/profile" : "/login"} className="nav-link me-3">
                       <i className="fi fi-rr-user fs-4"></i>
                     </NavLink>
                   </li>
